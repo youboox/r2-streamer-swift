@@ -73,7 +73,7 @@ internal class Fetcher {
         return data
     }
 
-    internal func data(forLink link: Link) throws -> Data? {
+    internal func data(forLink link: Link) throws -> Data {
         let path = link.href
         var data = try container.data(relativePath: path)
         data = try contentFilters.apply(to: data, of: publication, with: container, at: path)
