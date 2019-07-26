@@ -13,8 +13,6 @@ import Foundation
 import R2Shared
 import GCDWebServer
 
-extension GCDWebServerResponse: Loggable {}
-
 /// Errors thrown by the `WebServerResourceResponse`
 ///
 /// - streamOpenFailed: The stream is not open, stream.open() failed.
@@ -150,4 +148,5 @@ open class WebServerResourceResponse: GCDWebServerFileResponse {
     }
 }
 
+extension WebServerResourceResponse: Loggable {}
 
