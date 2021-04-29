@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
 
   s.dependency 'R2Shared',      '~> 1.4.1'
   s.dependency 'Fuzi',          '3.1.1'
-  s.dependency 'CryptoSwift',   '~> 1.4.0'
-  s.dependency 'GCDWebServer',  '3.5.2'
+  s.dependency 'CryptoSwift',   '1.3.2'
+  s.dependency 'GCDWebServer',  '3.6.2'
   s.dependency 'Minizip'
 
 end
