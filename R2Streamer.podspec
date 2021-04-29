@@ -7,12 +7,13 @@ Pod::Spec.new do |s|
   s.homepage     = "http://readium.github.io"
   s.author       = { "Aferdita Muriqi" => "aferdita.muriqi@gmail.com" }
   s.platform     = :ios
-  s.ios.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/youboox/r2-streamer-swift.git", :branch => "YoubooxVersion02" }
   s.exclude_files = ["**/Info*.plist","**/Carthage/*"]
-  s.source_files  = ["r2-streamer-swift/**/*.{m,h,swift}"]
-  s.resources    = ['r2-streamer-swift/Resources/**/*.{otf,js}', 'r2-streamer-swift/Resources/styles/**']
+  s.source_files  = "r2-streamer-swift/**/*.{m,h,swift}"
+  s.requires_arc = true
+  s.resources = ['r2-streamer-swift/Resources/**']
   s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  s.ios.deployment_target = "10.0"
   s.swift_version  = "5.0"
 
   s.libraries =  ['z', 'xml2']
@@ -20,7 +21,6 @@ Pod::Spec.new do |s|
   s.dependency 'R2Shared',      '~> 1.4.1'
   s.dependency 'Fuzi',          '3.1.1'
   s.dependency 'CryptoSwift',   '1.3.2'
-  s.dependency 'GCDWebServer',  '3.6.3'
   s.dependency 'Minizip'
 
 end

@@ -12,7 +12,4 @@
 #ifndef R2Streamer_Bridging_Header_h
 #define R2Streamer_Bridging_Header_h
 
-#import <GCDWebServer/GCDWebServer.h>
-#import <GCDWebServer/GCDWebServerDataResponse.h>
-
 #endif /* R2Streamer_Bridging_Header_h */

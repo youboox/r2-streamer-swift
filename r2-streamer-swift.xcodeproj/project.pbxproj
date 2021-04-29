@@ -19,8 +19,6 @@
 		CA130D59229D4245000A627C /* ContentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA130D1E229D4245000A627C /* ContentFilter.swift */; };
 		CA130D5A229D4245000A627C /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA130D1F229D4245000A627C /* Fetcher.swift */; };
 		CA130D5B229D4245000A627C /* DataCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA130D20229D4245000A627C /* DataCompression.swift */; };
-		CA130D5C229D4245000A627C /* PublicationServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA130D22229D4245000A627C /* PublicationServer.swift */; };
-		CA130D5D229D4245000A627C /* WebServerResourceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA130D23229D4245000A627C /* WebServerResourceResponse.swift */; };
 		CA130D5E229D4245000A627C /* r2-streamer-swift-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CA130D24229D4245000A627C /* r2-streamer-swift-Bridging-Header.h */; };
 		CA130D5F229D4245000A627C /* CBZContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA130D27229D4245000A627C /* CBZContainer.swift */; };
 		CA130D60229D4245000A627C /* CBZParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA130D28229D4245000A627C /* CBZParser.swift */; };
@@ -92,8 +90,6 @@
 		CA130D1E229D4245000A627C /* ContentFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentFilter.swift; sourceTree = "<group>"; };
 		CA130D1F229D4245000A627C /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		CA130D20229D4245000A627C /* DataCompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCompression.swift; sourceTree = "<group>"; };
-		CA130D22229D4245000A627C /* PublicationServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationServer.swift; sourceTree = "<group>"; };
-		CA130D23229D4245000A627C /* WebServerResourceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServerResourceResponse.swift; sourceTree = "<group>"; };
 		CA130D24229D4245000A627C /* r2-streamer-swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "r2-streamer-swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA130D27229D4245000A627C /* CBZContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBZContainer.swift; sourceTree = "<group>"; };
 		CA130D28229D4245000A627C /* CBZParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBZParser.swift; sourceTree = "<group>"; };
@@ -203,7 +199,6 @@
 				CA130D04229D4245000A627C /* Resources */,
 				CA130D25229D4245000A627C /* Parser */,
 				CA130D1B229D4245000A627C /* Fetcher */,
-				CA130D21229D4245000A627C /* Server */,
 				CA130D3A229D4245000A627C /* Model */,
 				CA130D3F229D4245000A627C /* Toolkit */,
 			);
@@ -239,15 +234,6 @@
 				CA130D20229D4245000A627C /* DataCompression.swift */,
 			);
 			path = Fetcher;
-			sourceTree = "<group>";
-		};
-		CA130D21229D4245000A627C /* Server */ = {
-			isa = PBXGroup;
-			children = (
-				CA130D22229D4245000A627C /* PublicationServer.swift */,
-				CA130D23229D4245000A627C /* WebServerResourceResponse.swift */,
-			);
-			path = Server;
 			sourceTree = "<group>";
 		};
 		CA130D25229D4245000A627C /* Parser */ = {
@@ -518,7 +504,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA130D5C229D4245000A627C /* PublicationServer.swift in Sources */,
 				CA130D45229D4245000A627C /* FileInputStream.swift in Sources */,
 				CA130D71229D4245000A627C /* ArchiveContainer.swift in Sources */,
 				CA130D66229D4245000A627C /* EPUBParser.swift in Sources */,
@@ -538,7 +523,6 @@
 				CA130D68229D4245000A627C /* NCXParser.swift in Sources */,
 				CA130D6A229D4245000A627C /* NavigationDocumentParser.swift in Sources */,
 				CA130D5A229D4245000A627C /* Fetcher.swift in Sources */,
-				CA130D5D229D4245000A627C /* WebServerResourceResponse.swift in Sources */,
 				CA130D46229D4245000A627C /* DataInputStream.swift in Sources */,
 				CA130D70229D4245000A627C /* Container.swift in Sources */,
 				CA130D60229D4245000A627C /* CBZParser.swift in Sources */,
@@ -729,7 +713,7 @@
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "r2-streamer-swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = org.readium.R2Streamer;
@@ -760,7 +744,7 @@
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "r2-streamer-swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = org.readium.R2Streamer;
